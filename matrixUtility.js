@@ -20,6 +20,15 @@ function product(A, B) {
 	return C;
 }
 
+function scalarProduct(c, A) {
+	const B = [];
+	for (let i = 0; i < A.length; i++) {
+		B[i] = [];
+		for (let j = 0; j < A[0].length; j++) B[i][j] = c * A[i][j];
+	}
+	return B;
+}
+
 function sum(A, B) {
 	const C = [];
 	for (let i = 0; i < A.length; i++) {
