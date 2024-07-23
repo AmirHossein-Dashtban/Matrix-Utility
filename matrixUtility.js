@@ -6,3 +6,21 @@ function identity(dimension) {
 	}
 	return identity;
 }
+
+function sum(A, B) {
+	const C = [];
+	for (let i = 0; i < A.length; i++) {
+		C[i] = [];
+		for (let j = 0; j < A[0].length; j++) C[i][j] = A[i][j] + B[i][j];
+	}
+	return C;
+}
+
+function transpose(matrix) {
+	const B = [];
+	for (let i = 0; i < matrix[0].length; i++) {
+		B[i] = [];
+		for (let j = 0; j < matrix.length; j++) B[i][j] = matrix[j][i];
+	}
+	return B;
+}
