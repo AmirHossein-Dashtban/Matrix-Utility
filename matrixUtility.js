@@ -7,6 +7,19 @@ function identity(dimension) {
 	return identity;
 }
 
+function product(A, B) {
+	const C = [];
+	for (let i = 0; i < A.length; i++) {
+		C[i] = [];
+		for (let j = 0; j < B[0].length; j++) {
+			let minor = 0;
+			for (let k = 0; k < A[0].length; k++) minor += A[i][k] * B[k][j];
+			C[i][j] = minor;
+		}
+	}
+	return C;
+}
+
 function sum(A, B) {
 	const C = [];
 	for (let i = 0; i < A.length; i++) {
